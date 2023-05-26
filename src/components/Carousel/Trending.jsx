@@ -7,7 +7,7 @@ import styles from "../../style";
 import MovieCard from "../Cards/MovieCard";
 
 const Trending = (props) => {
-  const apiKey = process.env.REACT_APP_API_KEY
+  const apiKey = process.env.REACT_APP_API_KEY;
   const [Movies, setMovies] = useState([]);
   const isMounted = useRef(true);
   const upload = async () => {

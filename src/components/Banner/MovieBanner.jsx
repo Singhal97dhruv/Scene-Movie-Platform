@@ -4,8 +4,8 @@ import styles from "../../style";
 
 const MovieBanner = (props) => {
   const [Movies, setMovies] = useState({});
-  const apiKey = process.env.REACT_APP_API_KEY
-
+  const apiKey = process.env.REACT_APP_API_KEY;
+  console.log(apiKey)
   useEffect(() => {
     const update = async () => {
       await axios
@@ -112,6 +112,10 @@ const MovieBanner = (props) => {
                 <button className="rounded-full w-10 h-10 bg-white hover:bg-gray-100 duration-200 p-0 border-0 inline-flex items-center justify-center text-red-500 ml-4">
                   <ion-icon name="heart"></ion-icon>
                 </button>
+              </div>
+              <div className="flex my-5">
+                <input type="text"  className="w-2/3 bg-inherit text-[#dfe4ea]" placeholder="Share your thoughts" />
+                <button className="flex bg-blue-gradient text-black border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded ml-4">Submit</button>
               </div>
             </div>
           </div>

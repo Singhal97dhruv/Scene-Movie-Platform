@@ -7,8 +7,7 @@ import Search from "../components/Search";
 const Home = () => {
   const [genreMovie, setGenreMovie] = useState([]);
   const isMounted = useRef(true);
-  const apiKey = process.env.REACT_APP_API_KEY
-
+  const apiKey = process.env.REACT_APP_API_KEY;
   const uploadMovie = async () => {
     await axios
       .get(
